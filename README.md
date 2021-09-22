@@ -1,4 +1,7 @@
 # General
+
+[![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
+
 You will hear "Welcome to the server!" sound when joining the server
 
 # Contacts
