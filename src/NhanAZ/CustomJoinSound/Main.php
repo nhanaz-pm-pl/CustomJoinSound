@@ -15,6 +15,8 @@ use pocketmine\resourcepacks\ZippedResourcePack;
 class Main extends PluginBase implements Listener
 {
 
+	public $soundName;
+
 	public function onEnable() : void
 	{
 		$this->saveResource("CustomJoinSound.mcpack", true);
