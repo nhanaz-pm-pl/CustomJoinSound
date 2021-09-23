@@ -6,4 +6,5 @@ api: 3.23.1
 author: NhanAZ
 website: https://github.com/NhanAZ
 description: You will hear "Welcome to the server!" sound when joining the server
+mcpe-protocol: [465]
 ...

@@ -12,10 +12,10 @@ use pocketmine\event\player\PlayerJoinEvent;
 use ReflectionClass;
 use pocketmine\resourcepacks\ZippedResourcePack;
 
+use pocketmine\network\mcpe\protocol\PlaySoundPacket;
+
 class Main extends PluginBase implements Listener
 {
-
-	public $soundName;
 
 	public function onEnable() : void
 	{
