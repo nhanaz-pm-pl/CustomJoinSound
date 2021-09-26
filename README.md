@@ -1,6 +1,6 @@
 # General
 
-[![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.api/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
+[![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.api/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl.total/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
 
 You will hear "Welcome to the server!" sound when you joining the server
 
