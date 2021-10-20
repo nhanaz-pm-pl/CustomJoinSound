@@ -2,7 +2,7 @@
 
 [![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.api/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl.total/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
 
-This is a plugin written in PHP programming language and running on the PocketMine platform that works stably on the API 3.25.0 platform. It allows you to hear the sound "Welcome to the server!" when you join the server
+This is a plugin written in PHP programming language and running on the PocketMine platform that works stably on the API [3.0.0 - 3.25.0] platform. It allows you to hear the sound "Welcome to the server!" when you join the server
 
 # Contacts
 If you encounter an error or would like to contribute to my plugin, contact me via the platforms below:
