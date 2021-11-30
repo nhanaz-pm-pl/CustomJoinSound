@@ -2,9 +2,8 @@
 name: CustomJoinSound
 author: NhanAZ
 version: 0.0.5
-api: [3.25.2]
+api: 3.25.6
 main: NhanAZ\CustomJoinSound\Main
 website: https://github.com/NhanAZ
 description: You will hear "Welcome to the server!" sound when joining the server
-mcpe-protocol: [471]
 ...
