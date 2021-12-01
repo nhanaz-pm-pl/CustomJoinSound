@@ -1,16 +1,22 @@
 # General
+**A plugin that allows you to hear the sound "Welcome to the server!" when you join the server by NhanAZ for PocketMine-MP**
 
-[![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.api/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl.total/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound) [![](https://poggit.pmmp.io/shield.dl/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
-
-This is a plugin written in PHP programming language and running on the PocketMine platform that works stably on the API 3.25.2 platform. It allows you to hear the sound "Welcome to the server!" when you join the server
+[![Poggit Lint](https://poggit.pmmp.io/ci.shield/nhanaz-pm-pl/CustomJoinSound/CustomJoinSound)](https://poggit.pmmp.io/ci.shield/nhanaz-pm-pl/CustomJoinSound/CustomJoinSound)
+[![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
+[![](https://poggit.pmmp.io/shield.api/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
+[![](https://poggit.pmmp.io/shield.dl.total/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
+[![](https://poggit.pmmp.io/shield.dl/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
 
 # Contacts
-If you encounter an error or would like to contribute to my plugin, contact me via the platforms below:
+**You can contact me directly through the platforms listed below**
+| Platform | Contact            |
+| -------- | ------------------ |
+| Discord  | NhanAZ#9115        |
+| Email    | NhanAZ@pm.me       |
+| Twitter  | @ThanhNhanAZ       |
+| Zalo     | @ThanhNhanAZ       |
+| FaceBook | fb.com/ThanhNhanAZ |
 
-- Zalo: @thanhnhanaz
-- Gmail: nhanaz@pm.me
-- Discord: NhanAZ#9115
-- FaceBook: fb.com/thanhnhanaz
 
 # License
-[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+[**GNU General Public License v3.0**](https://www.gnu.org/licenses/gpl-3.0.html)
