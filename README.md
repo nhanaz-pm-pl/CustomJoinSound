@@ -1,5 +1,5 @@
 # General
-**A plugin that allows you to hear the sound "Welcome to the server!" when you join the server by NhanAZ for PocketMine-MP**
+**A plugin that allows you to hear the sound "Welcome to the server!" when you join the server**
 
 [![Poggit Lint](https://poggit.pmmp.io/ci.shield/nhanaz-pm-pl/CustomJoinSound/CustomJoinSound)](https://poggit.pmmp.io/ci.shield/nhanaz-pm-pl/CustomJoinSound/CustomJoinSound)
 [![](https://poggit.pmmp.io/shield.state/CustomJoinSound)](https://poggit.pmmp.io/p/CustomJoinSound)
