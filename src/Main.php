@@ -11,9 +11,11 @@ use ReflectionClass;
 use pocketmine\resourcepacks\ZippedResourcePack;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener
+{
 
-	public function onEnable() : void {
+	public function onEnable() : void
+	{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 
 		$this->saveResource("CustomJoinSound.mcpack", true);
@@ -40,12 +42,13 @@ class Main extends PluginBase implements Listener{
 		$property->setAccessible(true);
 		$property->setValue($manager, true);
 	}
-	
+
 	/**
 	 * @param PlayerJoinEvent $event
 	 * @priority HIGHEST
 	 */
-	public function onJoin(PlayerJoinEvent $event){
+	public function onJoin(PlayerJoinEvent $event)
+	{
 		$player = $event->getPlayer();
 		$packet = new PlaySoundPacket();
 		$packet->soundName = "CustomJoinSound";
