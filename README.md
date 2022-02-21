@@ -1,5 +1,5 @@
 # General
 **You should hear "Welcome to the server!" when join server**
 
-# Contacts
+# Contact
 **You can contact me directly via Discord NhanAZ#9115**
