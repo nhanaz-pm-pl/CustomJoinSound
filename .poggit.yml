@@ -8,4 +8,7 @@ projects:
     icon: icon.png
     lint:
       phpstan: false
+    libs:
+      - src: NhanAZ/libRegRsp/libRegRsp
+        version: ^1.0.0
 ...

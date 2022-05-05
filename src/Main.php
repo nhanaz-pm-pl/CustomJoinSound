@@ -7,51 +7,27 @@ namespace NhanAZ\CustomJoinSound;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
-use ReflectionClass;
-use pocketmine\resourcepacks\ZippedResourcePack;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
+use NhanAZ\libRegRsp\libRegRsp;
 
 class Main extends PluginBase implements Listener {
 
+	private libRegRsp $libRegRsp;
+
 	public function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-
-		$this->saveResource("CustomJoinSound.mcpack", true);
-
-		$manager = $this->getServer()->getResourcePackManager();
-		$pack = new ZippedResourcePack($this->getDataFolder() . "CustomJoinSound.mcpack");
-
-		$reflection = new ReflectionClass($manager);
-
-		$property = $reflection->getProperty("resourcePacks");
-		$property->setAccessible(true);
-
-		$currentResourcePacks = $property->getValue($manager);
-		$currentResourcePacks[] = $pack;
-		$property->setValue($manager, $currentResourcePacks);
-
-		$property = $reflection->getProperty("uuidList");
-		$property->setAccessible(true);
-		$currentUUIDPacks = $property->getValue($manager);
-		$currentUUIDPacks[strtolower($pack->getPackId())] = $pack;
-		$property->setValue($manager, $currentUUIDPacks);
-
-		$property = $reflection->getProperty("serverForceResources");
-		$property->setAccessible(true);
-		$property->setValue($manager, true);
+		$this->libRegRsp = new libRegRsp($this);
+		$this->libRegRsp->regRsp("CustomJoinSound.mcpack");
 	}
 
-	/**
-	 * @param PlayerJoinEvent $event
-	 * @priority HIGHEST
-	 */
 	public function onJoin(PlayerJoinEvent $event) {
 		$player = $event->getPlayer();
+		$pos = $player->getPosition();
 		$packet = new PlaySoundPacket();
 		$packet->soundName = "CustomJoinSound";
-		$packet->x = $player->getPosition()->getX();
-		$packet->y = $player->getPosition()->getY();
-		$packet->z = $player->getPosition()->getZ();
+		$packet->x = $pos->getX();
+		$packet->y = $pos->getY();
+		$packet->z = $pos->getZ();
 		$packet->volume = 1;
 		$packet->pitch = 1;
 		$player->getNetworkSession()->sendDataPacket($packet);
