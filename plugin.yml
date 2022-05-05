@@ -2,7 +2,7 @@
 name: CustomJoinSound
 author: NhanAZ
 version: 1.0.0
-api: 4.0.0
+api: 4.3.0
 main: NhanAZ\CustomJoinSound\Main
 src-namespace-prefix: NhanAZ\CustomJoinSound
 website: https://github.com/NhanAZ
