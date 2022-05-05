@@ -14,7 +14,7 @@ class Main extends PluginBase implements Listener {
 
 	private libRegRsp $libRegRsp;
 
-	public function onEnable(): void {
+	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->libRegRsp = new libRegRsp($this);
 		$this->libRegRsp->regRsp("CustomJoinSound.mcpack");
