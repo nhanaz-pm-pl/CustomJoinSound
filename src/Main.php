@@ -12,12 +12,10 @@ use NhanAZ\libRegRsp\libRegRsp;
 
 class Main extends PluginBase implements Listener {
 
-	private libRegRsp $libRegRsp;
-
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->libRegRsp = new libRegRsp($this);
-		$this->libRegRsp->regRsp("CustomJoinSound.mcpack");
+		$libRegRsp = new libRegRsp($this);
+		$libRegRsp->regRsp("CustomJoinSound.mcpack");
 	}
 
 	public function onJoin(PlayerJoinEvent $event) {
