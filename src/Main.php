@@ -20,12 +20,12 @@ class Main extends PluginBase implements Listener {
 
 	public function onJoin(PlayerJoinEvent $event) {
 		$player = $event->getPlayer();
-		$pos = $player->getPosition();
+		$position = $player->getPosition();
 		$packet = new PlaySoundPacket();
 		$packet->soundName = "CustomJoinSound";
-		$packet->x = $pos->getX();
-		$packet->y = $pos->getY();
-		$packet->z = $pos->getZ();
+		$packet->x = $position->getX();
+		$packet->y = $position->getY();
+		$packet->z = $position->getZ();
 		$packet->volume = 1;
 		$packet->pitch = 1;
 		$player->getNetworkSession()->sendDataPacket($packet);
