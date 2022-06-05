@@ -8,7 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use jasonwynn10\libRegRsp\libRegRsp;
+use NhanAZ\libRegRsp\libRegRsp;
 
 class Main extends PluginBase implements Listener {
 
