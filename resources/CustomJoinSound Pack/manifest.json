@@ -1,0 +1,22 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Custom Join Sound Resource Pack",
+        "name": "Custom Join Sound",
+        "uuid": "367d14b8-dc48-4558-bcde-2cf5e528c94a",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 18, 30]
+    },
+    "modules": [
+        {
+            "description": "Custom Join Sound Resource Pack",
+            "type": "resources",
+            "uuid": "2312a5d6-809a-4dad-8424-c3b03df830d7",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "authors":["NhanAZ"],
+        "url":"https://github.com/NhanAZ"
+    }
+}

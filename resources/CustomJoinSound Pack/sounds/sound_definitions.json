@@ -1,0 +1,6 @@
+{
+    "CustomJoinSound": {
+        "category": "music",
+        "sounds": ["sounds/CustomJoinSound"]
+    }
+}
