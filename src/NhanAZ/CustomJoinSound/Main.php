@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener {
 		$this->libRegRsp->regRsp();
 	}
 
-	protected function onDisable() : void {
+	protected function onDisable(): void {
 		$this->libRegRsp->unregRsp();
 	}
 
