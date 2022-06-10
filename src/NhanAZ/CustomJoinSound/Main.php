@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener {
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		// $this->saveDefaultConfig();
-		$this->libRegRsp = libCustomPack::generatePackFromResources($plugin);
+		$this->libRegRsp = libCustomPack::generatePackFromResources($this);
 		libCustomPack::registerResourcePack($this->libRegRsp);
 	}
 
