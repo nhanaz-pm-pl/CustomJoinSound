@@ -8,21 +8,22 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use NhanAZ\libRegRsp\libRegRsp;
+use pocketmine\resourcepacks\ZippedResourcePack;
+use libCustomPack\libCustomPack;
 
 class Main extends PluginBase implements Listener {
 
-	private libRegRsp $libRegRsp;
+	private ZippedResourcePack $libRegRsp;
 
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		// $this->saveDefaultConfig();
-		$this->libRegRsp = new libRegRsp($this);
-		$this->libRegRsp->regRsp();
+		$this->libRegRsp = libCustomPack::generatePackFromResources($plugin);
+		libCustomPack::registerResourcePack($this->libRegRsp);
 	}
 
 	protected function onDisable(): void {
-		$this->libRegRsp->unregRsp();
+		libCustomPack::unregisterResourcePack($this->libRegRsp);
 	}
 
 	public function onJoin(PlayerJoinEvent $event) {

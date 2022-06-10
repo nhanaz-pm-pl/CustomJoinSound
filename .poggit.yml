@@ -9,6 +9,6 @@ projects:
     lint:
       phpstan: false
     libs:
-      - src: NhanAZ/libRegRsp/libRegRsp
-        version: ^1.0.0
+      - src: jasonwynn10/libCustomPack/libCustomPack
+        version: ^0.1.1
 ...
