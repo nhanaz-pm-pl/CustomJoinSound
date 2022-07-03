@@ -1,0 +1,4 @@
+---
+# Only send a welcome sound to players who join the server for the first time
+onlyFirstTime: false
+...
