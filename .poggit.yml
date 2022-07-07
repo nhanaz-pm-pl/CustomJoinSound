@@ -6,9 +6,7 @@ projects:
   CustomJoinSound:
     path: ""
     icon: icon.png
-    lint:
-      phpstan: false
     libs:
       - src: NhanAZ/libRegRsp/libRegRsp
-        version: ^1.0.0
+        version: ^1.0.1+dev
 ...
