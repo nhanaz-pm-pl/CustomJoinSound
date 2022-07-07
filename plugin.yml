@@ -1,8 +1,8 @@
 ---
 name: CustomJoinSound
 author: NhanAZ
-version: 1.0.3
-api: 4.0.0
+version: 1.0.4+dev
+api: 5.0.0
 main: NhanAZ\CustomJoinSound\Main
 website: https://github.com/NhanAZ
 description: You will hear "Welcome to the server!" sound when joining the server
