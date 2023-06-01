@@ -8,5 +8,5 @@ projects:
     icon: icon.png
     libs:
       - src: NhanAZ/libRegRsp/libRegRsp
-        version: ^1.0.1+dev
+        version: 1.0.2
 ...
