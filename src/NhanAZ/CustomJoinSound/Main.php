@@ -13,32 +13,29 @@ use NhanAZ\libRegRsp\libRegRsp;
 
 class Main extends PluginBase implements Listener {
 
-	private libRegRsp $libRegRsp;
-
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
-		$this->libRegRsp = new libRegRsp($this);
-		$this->libRegRsp->regRsp();
+		libRegRsp::regRsp($this);
 	}
 
 	protected function onDisable(): void {
-		$this->libRegRsp->unregRsp();
+		libRegRsp::unRegRsp($this);
 	}
 
 	private function sendWelcomeSound(Player $player): void {
 		$position = $player->getPosition();
-		$packet = new PlaySoundPacket();
-		$packet->soundName = "CustomJoinSound";
-		$packet->x = $position->getX();
-		$packet->y = $position->getY();
-		$packet->z = $position->getZ();
-		$packet->volume = 1;
-		$packet->pitch = 1;
-		$player->getNetworkSession()->sendDataPacket($packet);
+		$player->getNetworkSession()->sendDataPacket(PlaySoundPacket::create(
+			soundName: "CustomJoinSound",
+			x: $position->getX(),
+			y: $position->getY(),
+			z: $position->getZ(),
+			volume: 1.0,
+			pitch: 1.0
+		));
 	}
 
-	public function onJoin(PlayerJoinEvent $event) {
+	public function onJoin(PlayerJoinEvent $event): void {
 		$player = $event->getPlayer();
 		if ($this->getConfig()->get("onlyFirstTime", false)) {
 			if (!$event->getPlayer()->hasPlayedBefore()) {
