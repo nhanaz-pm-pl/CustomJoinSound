@@ -4,38 +4,41 @@ declare(strict_types=1);
 
 namespace NhanAZ\CustomJoinSound;
 
-use NhanAZ\libBedrock\ResourcePackManager;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
+use NhanAZ\libRegRsp\libRegRsp;
 
 class Main extends PluginBase implements Listener {
+
+	private libRegRsp $libRegRsp;
 
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
-		ResourcePackManager::registerResourcePack($this);
+		$this->libRegRsp = new libRegRsp($this);
+		$this->libRegRsp->regRsp();
 	}
 
 	protected function onDisable(): void {
-		ResourcePackManager::unRegisterResourcePack($this);
+		$this->libRegRsp->unregRsp();
 	}
 
 	private function sendWelcomeSound(Player $player): void {
 		$position = $player->getPosition();
-		$player->getNetworkSession()->sendDataPacket(PlaySoundPacket::create(
-			soundName: "CustomJoinSound",
-			x: $position->getX(),
-			y: $position->getY(),
-			z: $position->getZ(),
-			volume: 1.0,
-			pitch: 1.0
-		));
+		$packet = new PlaySoundPacket();
+		$packet->soundName = "CustomJoinSound";
+		$packet->x = $position->getX();
+		$packet->y = $position->getY();
+		$packet->z = $position->getZ();
+		$packet->volume = 1;
+		$packet->pitch = 1;
+		$player->getNetworkSession()->sendDataPacket($packet);
 	}
 
-	public function onJoin(PlayerJoinEvent $event): void {
+	public function onJoin(PlayerJoinEvent $event) {
 		$player = $event->getPlayer();
 		if ($this->getConfig()->get("onlyFirstTime", false)) {
 			if (!$event->getPlayer()->hasPlayedBefore()) {
