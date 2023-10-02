@@ -7,6 +7,6 @@ projects:
     path: ""
     icon: icon.png
     libs:
-      - src: NhanAZ/libBedrock/libBedrock
+      - src: NhanAZ/libRegRsp/libRegRsp
         version: 1.1.7
 ...
